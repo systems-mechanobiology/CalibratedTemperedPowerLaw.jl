@@ -1,0 +1,3 @@
+[deps]
+CalibratedTemperedPowerLaw = "b96307a3-c6cf-4b2c-b046-64cb97ac31e8"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"

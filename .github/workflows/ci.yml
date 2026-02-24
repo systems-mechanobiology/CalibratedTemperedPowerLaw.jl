@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        julia-version: ['1.11']
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.julia-version }}
+
+      - name: Cache artifacts
+        uses: julia-actions/cache@v1
+
+      - name: Clone DynamicGeometricGraphs.jl dependency
+        run: git clone https://github.com/systems-mechanobiology/DynamicGeometricGraphs.jl.git ../DynamicGeometricGraphs.jl
+
+      - name: Install dependencies
+        run: |
+          julia --project=. -e '
+            using Pkg
+            Pkg.develop(path="../DynamicGeometricGraphs.jl")
+            Pkg.instantiate()
+          '
+
+      - name: Run tests
+        run: |
+          julia --project=. -e '
+            using Pkg
+            Pkg.test()
+          '

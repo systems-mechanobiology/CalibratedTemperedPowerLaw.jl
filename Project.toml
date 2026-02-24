@@ -1,0 +1,46 @@
+name = "CalibratedTemperedPowerLaw"
+uuid = "b96307a3-c6cf-4b2c-b046-64cb97ac31e8"
+license = "AGPL-3.0"
+authors = ["b.cardoen@bham.ac.uk"]
+version = "0.1.1"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+DynamicGeometricGraphs = "126f6890-290c-40f9-b22d-fbb8f342ad65"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
+KernelDensity = "5ab0869b-81aa-558d-bb23-cbf5423bbe9b"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
+[compat]
+CSV = "0.10.15"
+DynamicGeometricGraphs = "0.1"
+CairoMakie = "0.12.18"
+DataFrames = "1.8.1"
+Distributions = "0.25"
+GLMakie = "0.10.18"
+Graphs = "1"
+KernelDensity = "0.6.11"
+LinearAlgebra = "1"
+Logging = "1.11.0"
+Plots = "1.41.4"
+Random = "1"
+SparseArrays = "1"
+StaticArrays = "1"
+Statistics = "1"
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
