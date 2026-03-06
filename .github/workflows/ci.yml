@@ -13,6 +13,8 @@ jobs:
         julia-version: ['1.11']
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
