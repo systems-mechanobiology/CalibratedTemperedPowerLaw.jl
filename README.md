@@ -2,6 +2,7 @@
 
 **Calibrated Tempered Power Law (CTPL) noise modeling**
 
+[![CI](https://github.com/systems-mechanobiology/CalibratedTemperedPowerLaw.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/systems-mechanobiology/CalibratedTemperedPowerLaw.jl/actions/workflows/ci.yml)
 [![Julia v1+](https://img.shields.io/badge/julia-v1.0%2B-blue)](https://julialang.org/)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
