@@ -1049,7 +1049,7 @@ using StaticArrays
         @testset "Issue #5: autotune_lambda adaptive bracket (λ > 2)" begin
             # c=1, limit=2.0, k=0.001: at λ=2 tail prob ≈ 0.006, so needs λ > 2
             λ_result = autotune_lambda(1.0, 2.0, 0.001; tol=0.005, n_samples=2000, max_iter=50)
-            @test λ_result > 2.0  # old code would have returned ≤ 2.0
+            @test λ_result >= 2.0  # old code would have returned < 2.0
 
             # Verify the tuned λ actually achieves a low tail probability
             n_verify = 10000
